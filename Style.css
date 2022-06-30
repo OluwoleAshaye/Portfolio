@@ -1,0 +1,368 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+:root {    
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code pro', monospace;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #000000;
+    --clr-accent: #4f0042;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+
+@media (min-width: 600px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+
+
+        --bs: 0.25em 0.25em 0.75rem rgba(0,0,0,.25),
+              0.125em 0.125em 0.25em rgba(0,0,0,.15);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-family: 'Krona One', sans-serif;
+    background-image: url(/Images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg);
+    color: var(--clr-dark);
+    margin: 0;
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    
+}
+
+section {
+    padding: 5em 2em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong { font-weight: var(--fw-bold);}
+
+.btn {
+    display: inline-block;
+    padding: .5em 1.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+
+
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+:focus {
+    outline: 0.5px solid rgb(0, 0, 0);
+    outline-offset: 0.5px;
+}
+
+h1, h2, h3 {
+    line-height: 1;
+    margin: 0% ;
+}
+
+h1 {font-size: var(--fs-h1);}
+h2 {font-size: var(--fs-h2);}
+h3 {font-size: var(--fs-h3);}
+
+.section__title {
+margin-bottom: .25em;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+    display: block ;
+}
+
+.section__subtitle {
+    margin: 0%;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--aboutme {
+background: var(--clr-accent);
+padding: .25em 1em;
+font-family: var(--ff-secondary);
+margin-bottom: 1em;
+}
+
+
+
+
+.intro {
+    position: relative;
+}
+
+.intro__img {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas:
+        "img title"
+        "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .section__subtitle--intro {
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+    }
+}
+
+.aboutme{
+    background-size: cover;
+    background-blend-mode:multiply;
+    color: var(--clr-dark);
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+@media (min-width:600px) {
+    .aboutme {
+        display: grid;
+        grid-template-rows: 1fr 75px;
+    }
+}
+
+.skill {
+    background-size: contain;
+    color: var(--clr-dark);
+    text-align: center;
+    position: relative ;
+    margin: 0 auto;
+    max-width: 1000px;
+    align-content: center;
+}
+
+
+
+
+.section__title--projects {
+    text-align: center;
+}
+
+
+
+.project {
+    background-size: cover;
+    background-blend-mode:multiply;
+    opacity: 0.80;
+    color: var(--clr-dark);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.wrapper > div {
+
+    padding: 1em;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+
+
+.wrapper2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.wrapper2 > div {
+   
+    padding: 1em;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+
+
+.wrapper3 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.wrapper3 > div {
+   
+    padding: 1em;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+
+
+.contact {
+    background-size: cover;
+    color: var(--clr-dark);
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    z-index: 100000;
+    width: 97%;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li:hover {
+    background-color: #4f0042;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #4f0042;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .toggle-button {
+      display: flex;
+    }
+
+    .toggle-button:hover {
+        cursor: pointer;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+
+}
