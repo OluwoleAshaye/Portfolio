@@ -40,7 +40,7 @@ html {
 
 body{
     font-family: 'Krona One', sans-serif;
-    background-image: url(/Images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg);
+    background-image: url(/Portfolio/Images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg);
     color: var(--clr-dark);
     margin: 0;
     font-size: var(--fs-body);
